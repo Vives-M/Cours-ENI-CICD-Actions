@@ -1,0 +1,1 @@
+echo "Waow ! This is a wonderful first action ! Congratulations $INPUT_ACTOR_NAME !"

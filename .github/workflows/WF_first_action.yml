@@ -1,0 +1,14 @@
+name: Execute the first action
+on: 
+    push:
+        branches:
+            - feat-*
+jobs:
+    execute_first_action:
+        runs-on: ubuntu-24.04
+        steps:
+        - uses: actions/checkout@v3
+        - name: Execute the first action
+          uses: ./.github/actions
+          with:
+            actor_name: ${{ github.actor }}

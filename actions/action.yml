@@ -1,0 +1,13 @@
+name: "First action"
+description: "This is the most incredible first action I've ever seen !"
+runs:
+  using: "composite"
+  steps:
+  - run: bash ${{github.action_path}}/first_action.sh
+    shell: bash
+    env:
+      INPUT_ACTOR_NAME: ${{ inputs.actor_name }}
+inputs:
+  actor_name:
+    description: "This is the name of the actor who triggered the workflow"
+    required: true
